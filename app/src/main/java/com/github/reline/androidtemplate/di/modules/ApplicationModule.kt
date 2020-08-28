@@ -1,5 +1,6 @@
 package com.github.reline.androidtemplate.di.modules
 
+import com.github.reline.androidtemplate.BuildConfig
 import com.github.reline.androidtemplate.utils.AndroidSchedulerProvider
 import com.github.reline.androidtemplate.utils.NoOpTree
 import com.github.reline.androidtemplate.utils.SchedulerProvider
@@ -22,6 +23,10 @@ class ApplicationModule {
     @Provides
     @Singleton
     fun provideTree(): Timber.Tree {
-        return NoOpTree()
+        return if (BuildConfig.DEBUG) {
+            Timber.DebugTree()
+        } else {
+            NoOpTree()
+        }
     }
 }
