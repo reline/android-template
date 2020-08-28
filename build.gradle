@@ -5,6 +5,7 @@ buildscript {
     ext.dagger_version = '2.27'
     ext.moshi_version = '1.9.2'
     ext.retrofit_version = '2.6.0'
+    ext.room_version = "2.2.5"
     repositories {
         google()
         jcenter()

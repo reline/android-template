@@ -11,7 +11,8 @@ import javax.inject.Singleton
 
 @Module(includes = [
     ViewModelModule::class,
-    NetworkModule::class
+    NetworkModule::class,
+    PersistenceModule::class
 ])
 class ApplicationModule {
     @Provides

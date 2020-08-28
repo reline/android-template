@@ -5,6 +5,7 @@ import androidx.core.view.KeyEventDispatcher
 import com.github.reline.androidtemplate.MainActivity
 import com.github.reline.androidtemplate.MainApplication
 import com.github.reline.androidtemplate.di.modules.ApplicationModule
+import com.github.reline.androidtemplate.ui.main.MainFragment
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -22,4 +23,5 @@ interface ApplicationComponent {
 
     fun inject(application: MainApplication)
     fun inject(activity: MainActivity)
+    fun inject(fragment: MainFragment)
 }
